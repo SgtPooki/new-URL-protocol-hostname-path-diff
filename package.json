@@ -4,11 +4,11 @@
   "type": "module",
   "scripts": {
     "test": "run-s test:*",
-    "test:chrome": "aegir test -t browser --cov",
+    "test:chrome": "aegir test -t browser",
     "test:chrome-webworker": "aegir test -t webworker",
     "test:firefox": "aegir test -t browser -- --browser firefox",
     "test:firefox-webworker": "aegir test -t webworker -- --browser firefox",
-    "test:node": "aegir test -t node --cov",
+    "test:node": "aegir test -t node",
     "test:electron-main": "aegir test -t electron-main"
   },
   "devDependencies": {
