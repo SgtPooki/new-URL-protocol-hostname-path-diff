@@ -1,3 +1,2 @@
-// run `node index.js` in the terminal
-
-console.log(`Hello Node.js v${process.versions.node}!`);
+// eslint-disable-next-line no-console
+console.log('run npm run test')
