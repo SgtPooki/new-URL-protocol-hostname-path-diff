@@ -1,3 +1,4 @@
 node_modules
 .coverage
-url-results-*.md
+url-results-*.*
+dist

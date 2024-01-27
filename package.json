@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "build": "aegir build",
     "clean": "aegir clean",
     "lint": "aegir lint",
     "test": "run-s test:*",

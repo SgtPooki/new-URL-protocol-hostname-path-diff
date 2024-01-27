@@ -4,7 +4,7 @@ import { writeFile } from 'node:fs/promises'
 /** @type {import('aegir/types').PartialOptions} */
 export default {
   test: {
-    files: ['test/*.spec.js'],
+    files: ['dist/test/*.spec.js'],
     async before (options) {
       const requestListener = async function (req, res) {
         const { env, table, url } = await new Promise(resolve => {
@@ -22,7 +22,8 @@ export default {
           res.writeHead(200, {
             'Access-Control-Allow-Origin': '*'
           })
-          await writeFile(`./url-results-${env}.md`, table)
+          const filenameSafeUrl = url.replace(/[^a-zA-Z0-9]/g, '_')
+          await writeFile(`./url-results-${filenameSafeUrl}-${env}.json`, JSON.stringify(table, null, 2), { encoding: 'utf8', append: false })
           res.end('done')
         } catch (err) {
           // eslint-disable-next-line no-console

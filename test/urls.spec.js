@@ -1,11 +1,13 @@
 /* eslint-env mocha */
 import { expect } from 'aegir/chai'
-import { createMarkdownTableResults } from './fixtures/create-markdown-table-results.js'
+import { createTableResults } from '../src/create-table-results.js'
 
+// @ts-ignore
 const getUrlString = (protocol, host, rest = '') => {
   return `${protocol}://${host}${rest}`
 }
 
+// @ts-ignore
 function validateObjects (actual, expected) {
   for (const [key, value] of Object.entries(expected)) {
     if (value === undefined) {
@@ -21,12 +23,15 @@ function validateObjects (actual, expected) {
 }
 
 describe('URL-test', () => {
+  const RUNNER_ENV = process.env.RUNNER_ENV
+  if (!RUNNER_ENV) throw new Error('No RUNNER_ENV set')
   describe('ipfs:// URLs', () => {
     let urlString = getUrlString('ipfs', 'bafyFoo')
-    it(`parses ipfs://bafyFoo in ${process.env.RUNNER_ENV}`, () => {
+    it(`parses ipfs://bafyFoo in ${RUNNER_ENV}`, () => {
       const urlString = getUrlString('ipfs', 'bafyFoo')
       const url = new URL(urlString)
-      if (['node', 'electron-main', 'webkit', 'webworker-webkit'].includes(process.env.RUNNER_ENV)) {
+
+      if (['node', 'electron-main', 'webkit', 'webworker-webkit'].includes(RUNNER_ENV)) {
         validateObjects(url, {
           origin: null,
           protocol: 'ipfs:',
@@ -39,7 +44,7 @@ describe('URL-test', () => {
           pathname: '',
           href: urlString
         })
-      } else if (process.env.RUNNER_ENV.includes('chrome')) {
+      } else if (RUNNER_ENV.includes('chrome')) {
         validateObjects(url, {
           origin: null,
           protocol: 'ipfs:',
@@ -52,7 +57,7 @@ describe('URL-test', () => {
           pathname: '//bafyFoo',
           href: urlString
         })
-      } else if (process.env.RUNNER_ENV.includes('firefox')) {
+      } else if (RUNNER_ENV.includes('firefox')) {
         validateObjects(url, {
           origin: 'ipfs://bafyfoo',
           protocol: 'ipfs:',
@@ -68,10 +73,11 @@ describe('URL-test', () => {
       }
     })
 
-    it(`parses ipfs://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${process.env.RUNNER_ENV}`, () => {
+    it(`parses ipfs://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${RUNNER_ENV}`, () => {
       urlString = getUrlString('ipfs', 'bafyFoo', '/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456')
       const url = new URL(urlString)
-      if (['node', 'electron-main', 'webkit', 'webworker-webkit'].includes(process.env.RUNNER_ENV)) {
+
+      if (['node', 'electron-main', 'webkit', 'webworker-webkit'].includes(RUNNER_ENV)) {
         validateObjects(url, {
           origin: null,
           protocol: 'ipfs:',
@@ -84,7 +90,7 @@ describe('URL-test', () => {
           pathname: '/path/file',
           href: urlString
         })
-      } else if (process.env.RUNNER_ENV.includes('chrome')) {
+      } else if (RUNNER_ENV.includes('chrome')) {
         validateObjects(url, {
           origin: null,
           protocol: 'ipfs:',
@@ -97,7 +103,7 @@ describe('URL-test', () => {
           pathname: '//bafyFoo/path/file',
           href: urlString
         })
-      } else if (process.env.RUNNER_ENV.includes('firefox')) {
+      } else if (RUNNER_ENV.includes('firefox')) {
         validateObjects(url, {
           origin: 'ipfs://bafyfoo',
           protocol: 'ipfs:',
@@ -116,9 +122,10 @@ describe('URL-test', () => {
   describe('ipns:// URLs', () => {
     const protocol = 'ipns'
     let urlString = getUrlString(protocol, 'bafyFoo')
-    it(`parses ${urlString} in ${process.env.RUNNER_ENV}`, () => {
+    it(`parses ${urlString} in ${RUNNER_ENV}`, () => {
       const url = new URL(urlString)
-      if (['node', 'electron-main', 'webkit', 'webworker-webkit'].includes(process.env.RUNNER_ENV)) {
+
+      if (['node', 'electron-main', 'webkit', 'webworker-webkit'].includes(RUNNER_ENV)) {
         validateObjects(url, {
           origin: null,
           protocol: 'ipns:',
@@ -131,7 +138,7 @@ describe('URL-test', () => {
           pathname: '',
           href: urlString
         })
-      } else if (process.env.RUNNER_ENV.includes('chrome')) {
+      } else if (RUNNER_ENV.includes('chrome')) {
         validateObjects(url, {
           origin: null,
           protocol: 'ipns:',
@@ -144,7 +151,7 @@ describe('URL-test', () => {
           pathname: '//bafyFoo',
           href: urlString
         })
-      } else if (process.env.RUNNER_ENV.includes('firefox')) {
+      } else if (RUNNER_ENV.includes('firefox')) {
         validateObjects(url, {
           origin: 'ipns://bafyfoo',
           protocol: 'ipns:',
@@ -160,10 +167,11 @@ describe('URL-test', () => {
       }
     })
 
-    it(`parses ipns://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${process.env.RUNNER_ENV}`, () => {
+    it(`parses ipns://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${RUNNER_ENV}`, () => {
       urlString = getUrlString('ipns', 'bafyFoo', '/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456')
       const url = new URL(urlString)
-      if (['node', 'electron-main', 'webkit', 'webworker-webkit'].includes(process.env.RUNNER_ENV)) {
+
+      if (['node', 'electron-main', 'webkit', 'webworker-webkit'].includes(RUNNER_ENV)) {
         validateObjects(url, {
           origin: null,
           protocol: 'ipns:',
@@ -176,7 +184,7 @@ describe('URL-test', () => {
           pathname: '/path/file',
           href: urlString
         })
-      } else if (process.env.RUNNER_ENV.includes('chrome')) {
+      } else if (RUNNER_ENV.includes('chrome')) {
         validateObjects(url, {
           origin: null,
           protocol: 'ipns:',
@@ -189,7 +197,7 @@ describe('URL-test', () => {
           pathname: '//bafyFoo/path/file',
           href: urlString
         })
-      } else if (process.env.RUNNER_ENV.includes('firefox')) {
+      } else if (RUNNER_ENV.includes('firefox')) {
         validateObjects(url, {
           origin: 'ipns://bafyfoo',
           protocol: 'ipns:',
@@ -209,7 +217,7 @@ describe('URL-test', () => {
   describe('http:// URLs', () => {
     const protocol = 'http'
     let urlString = getUrlString(protocol, 'bafyFoo')
-    it(`parses ${urlString} URLs work in ${process.env.RUNNER_ENV}`, () => {
+    it(`parses ${urlString} URLs work in ${RUNNER_ENV}`, () => {
       const url = new URL(urlString)
       validateObjects(url, {
         origin: 'http://bafyfoo',
@@ -225,7 +233,7 @@ describe('URL-test', () => {
       })
     })
 
-    it(`parses http://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${process.env.RUNNER_ENV}`, () => {
+    it(`parses http://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${RUNNER_ENV}`, () => {
       urlString = getUrlString('http', 'bafyFoo', '/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456')
       const url = new URL(urlString)
       validateObjects(url, {
@@ -246,7 +254,7 @@ describe('URL-test', () => {
   describe('https:// URLs', () => {
     const protocol = 'https'
     let urlString = getUrlString(protocol, 'bafyFoo')
-    it(`parses ${urlString} in ${process.env.RUNNER_ENV}`, () => {
+    it(`parses ${urlString} in ${RUNNER_ENV}`, () => {
       const url = new URL(urlString)
       validateObjects(url, {
         origin: 'https://bafyfoo',
@@ -262,7 +270,7 @@ describe('URL-test', () => {
       })
     })
 
-    it(`parses https://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${process.env.RUNNER_ENV}`, () => {
+    it(`parses https://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${RUNNER_ENV}`, () => {
       urlString = getUrlString('https', 'bafyFoo', '/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456')
       const url = new URL(urlString)
       validateObjects(url, {
@@ -283,7 +291,7 @@ describe('URL-test', () => {
   describe('ftp:// URLs', () => {
     const protocol = 'ftp'
     let urlString = getUrlString(protocol, 'bafyFoo')
-    it(`parses ${urlString} in ${process.env.RUNNER_ENV}`, () => {
+    it(`parses ${urlString} in ${RUNNER_ENV}`, () => {
       const url = new URL(urlString)
       validateObjects(url, {
         origin: 'ftp://bafyfoo',
@@ -299,7 +307,7 @@ describe('URL-test', () => {
       })
     })
 
-    it(`parses ftp://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${process.env.RUNNER_ENV}`, () => {
+    it(`parses ftp://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${RUNNER_ENV}`, () => {
       urlString = getUrlString('ftp', 'bafyFoo', '/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456')
       const url = new URL(urlString)
       validateObjects(url, {
@@ -322,25 +330,21 @@ describe('URL-test', () => {
       'PROTOCOL://bafyFoo',
       'PROTOCOL://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456'
     ]
-    let table = null
     for (const url of URLS) {
-      table = createMarkdownTableResults(url, process.env.RUNNER_ENV, table)
-    }
+      const table = createTableResults(url, RUNNER_ENV)
 
-    expect(table).to.be.a('string')
-    const result = await fetch(`${process.env.MARKDOWN_SERVER}`, {
-      method: 'POST',
-      keepalive: false,
-      body: JSON.stringify({
-        env: process.env.RUNNER_ENV,
-        url: 'PROTOCOL://bafyFoo',
-        table
+      expect(table).to.be.an('array').of.length(5)
+      const result = await fetch(`${process.env.MARKDOWN_SERVER}`, {
+        method: 'POST',
+        body: JSON.stringify({
+          env: RUNNER_ENV,
+          url,
+          table
+        })
       })
-    })
-    expect(result.ok).to.be.true()
-    // expect(result.)
-    // read result.body until empty
-    const body = await result.text()
-    expect(body).to.equal('done')
+      expect(result.ok).to.be.true()
+      const body = await result.text()
+      expect(body).to.equal('done')
+    }
   })
 })
