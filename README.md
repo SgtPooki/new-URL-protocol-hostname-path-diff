@@ -22,253 +22,253 @@ The following tables are generated from the test suite.
 
 #### Protocol "ipfs:"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "node" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "chrome" | "ipfs:" | "null" | "ipfs:" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "firefox" | "ipfs:" | "ipfs://bafyfoo" | "ipfs:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webkit" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "electron-main" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-chrome" | "ipfs:" | "null" | "ipfs:" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-firefox" | "ipfs:" | "ipfs://bafyfoo" | "ipfs:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-webkit" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| environment | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "node" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "chrome" | "null" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "firefox" | "ipfs://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webkit" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "electron-main" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-chrome" | "null" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-firefox" | "ipfs://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-webkit" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
 
 #### Protocol "ipns:"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "node" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "chrome" | "ipns:" | "null" | "ipns:" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "firefox" | "ipns:" | "ipns://bafyfoo" | "ipns:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webkit" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "electron-main" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-chrome" | "ipns:" | "null" | "ipns:" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-firefox" | "ipns:" | "ipns://bafyfoo" | "ipns:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-webkit" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| environment | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "node" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "chrome" | "null" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "firefox" | "ipns://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webkit" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "electron-main" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-chrome" | "null" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-firefox" | "ipns://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-webkit" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
 
 #### Protocol "http:"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "node" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "chrome" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "firefox" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webkit" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "electron-main" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-chrome" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-firefox" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-webkit" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| environment | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "node" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "chrome" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "firefox" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webkit" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "electron-main" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-chrome" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-firefox" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-webkit" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
 
 #### Protocol "https:"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "node" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "chrome" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "firefox" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webkit" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "electron-main" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-chrome" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-firefox" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-webkit" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| environment | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "node" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "chrome" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "firefox" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webkit" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "electron-main" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-chrome" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-firefox" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-webkit" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
 
 #### Protocol "ftp:"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "node" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "chrome" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "firefox" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webkit" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "electron-main" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-chrome" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-firefox" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-webkit" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| environment | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "node" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "chrome" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "firefox" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webkit" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "electron-main" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-chrome" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-firefox" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "webworker-webkit" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
 
 ### Grouped by environment "webworker-webkit"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "webworker-webkit" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-webkit" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
-| "webworker-webkit" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-webkit" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
-| "webworker-webkit" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-webkit" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-webkit" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-webkit" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-webkit" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-webkit" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| protocol | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "ipfs:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipfs:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| "ipns:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipns:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
 
 ### Grouped by environment "webworker-firefox"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "webworker-firefox" | "ipfs:" | "ipfs://bafyfoo" | "ipfs:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-firefox" | "ipfs:" | "ipfs://bafyfoo" | "ipfs:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-firefox" | "ipns:" | "ipns://bafyfoo" | "ipns:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-firefox" | "ipns:" | "ipns://bafyfoo" | "ipns:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-firefox" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-firefox" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-firefox" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-firefox" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-firefox" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-firefox" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| protocol | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "ipfs:" | "ipfs://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipfs:" | "ipfs://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "ipns:" | "ipns://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipns:" | "ipns://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
 
 ### Grouped by environment "webworker-chrome"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "webworker-chrome" | "ipfs:" | "null" | "ipfs:" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-chrome" | "ipfs:" | "null" | "ipfs:" | "" | "" | undefined | "" | "" |
-| "webworker-chrome" | "ipns:" | "null" | "ipns:" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-chrome" | "ipns:" | "null" | "ipns:" | "" | "" | undefined | "" | "" |
-| "webworker-chrome" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-chrome" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-chrome" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-chrome" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-chrome" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webworker-chrome" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| protocol | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "ipfs:" | "null" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipfs:" | "null" | "" | "" | undefined | "" | "" |
+| "ipns:" | "null" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipns:" | "null" | "" | "" | undefined | "" | "" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
 
 ### Grouped by environment "webkit"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "webkit" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webkit" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
-| "webkit" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webkit" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
-| "webkit" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webkit" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webkit" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webkit" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webkit" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "webkit" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| protocol | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "ipfs:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipfs:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| "ipns:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipns:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
 
 ### Grouped by environment "node"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "node" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "node" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
-| "node" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "node" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
-| "node" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "node" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "node" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "node" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "node" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "node" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| protocol | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "ipfs:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipfs:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| "ipns:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipns:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
 
 ### Grouped by environment "firefox"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "firefox" | "ipfs:" | "ipfs://bafyfoo" | "ipfs:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "firefox" | "ipfs:" | "ipfs://bafyfoo" | "ipfs:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "firefox" | "ipns:" | "ipns://bafyfoo" | "ipns:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "firefox" | "ipns:" | "ipns://bafyfoo" | "ipns:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "firefox" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "firefox" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "firefox" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "firefox" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "firefox" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "firefox" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| protocol | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "ipfs:" | "ipfs://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipfs:" | "ipfs://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "ipns:" | "ipns://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipns:" | "ipns://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
 
 ### Grouped by environment "electron-main"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "electron-main" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "electron-main" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
-| "electron-main" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "electron-main" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
-| "electron-main" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "electron-main" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "electron-main" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "electron-main" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "electron-main" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "electron-main" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| protocol | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "ipfs:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipfs:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| "ipns:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipns:" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
 
 ### Grouped by environment "chrome"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "chrome" | "ipfs:" | "null" | "ipfs:" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "chrome" | "ipfs:" | "null" | "ipfs:" | "" | "" | undefined | "" | "" |
-| "chrome" | "ipns:" | "null" | "ipns:" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "chrome" | "ipns:" | "null" | "ipns:" | "" | "" | undefined | "" | "" |
-| "chrome" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "chrome" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "chrome" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "chrome" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "chrome" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
-| "chrome" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| protocol | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "ipfs:" | "null" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipfs:" | "null" | "" | "" | undefined | "" | "" |
+| "ipns:" | "null" | "" | "" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ipns:" | "null" | "" | "" | undefined | "" | "" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "http:" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "https:" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "?myQueryK1=123&myQueryK2=456" | "#myHashValue1=123&myHashValue2=456" |
+| "ftp:" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
 
 ### Grouped by URL "PROTOCOL://bafyFoo"
 
 #### Protocol "ipfs:"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "node" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
-| "chrome" | "ipfs:" | "null" | "ipfs:" | "" | "" | undefined | "" | "" |
-| "firefox" | "ipfs:" | "ipfs://bafyfoo" | "ipfs:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webkit" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
-| "electron-main" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
-| "webworker-chrome" | "ipfs:" | "null" | "ipfs:" | "" | "" | undefined | "" | "" |
-| "webworker-firefox" | "ipfs:" | "ipfs://bafyfoo" | "ipfs:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-webkit" | "ipfs:" | "null" | "ipfs:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| environment | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "node" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| "chrome" | "null" | "" | "" | undefined | "" | "" |
+| "firefox" | "ipfs://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webkit" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| "electron-main" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| "webworker-chrome" | "null" | "" | "" | undefined | "" | "" |
+| "webworker-firefox" | "ipfs://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webworker-webkit" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
 
 #### Protocol "ipns:"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "node" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
-| "chrome" | "ipns:" | "null" | "ipns:" | "" | "" | undefined | "" | "" |
-| "firefox" | "ipns:" | "ipns://bafyfoo" | "ipns:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webkit" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
-| "electron-main" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
-| "webworker-chrome" | "ipns:" | "null" | "ipns:" | "" | "" | undefined | "" | "" |
-| "webworker-firefox" | "ipns:" | "ipns://bafyfoo" | "ipns:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-webkit" | "ipns:" | "null" | "ipns:" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| environment | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "node" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| "chrome" | "null" | "" | "" | undefined | "" | "" |
+| "firefox" | "ipns://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webkit" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| "electron-main" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
+| "webworker-chrome" | "null" | "" | "" | undefined | "" | "" |
+| "webworker-firefox" | "ipns://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webworker-webkit" | "null" | "bafyFoo" | "bafyFoo" | undefined | "" | "" |
 
 #### Protocol "http:"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "node" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "chrome" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "firefox" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webkit" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "electron-main" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-chrome" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-firefox" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-webkit" | "http:" | "http://bafyfoo" | "http:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| environment | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "node" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "chrome" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "firefox" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webkit" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "electron-main" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webworker-chrome" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webworker-firefox" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webworker-webkit" | "http://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
 
 #### Protocol "https:"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "node" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "chrome" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "firefox" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webkit" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "electron-main" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-chrome" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-firefox" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-webkit" | "https:" | "https://bafyfoo" | "https:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| environment | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "node" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "chrome" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "firefox" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webkit" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "electron-main" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webworker-chrome" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webworker-firefox" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webworker-webkit" | "https://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
 
 #### Protocol "ftp:"
 
-| environment | protocol | origin | protocol | host | hostname | path | search | hash |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| "node" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "chrome" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "firefox" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webkit" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "electron-main" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-chrome" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-firefox" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
-| "webworker-webkit" | "ftp:" | "ftp://bafyfoo" | "ftp:" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| environment | origin | host | hostname | path | search | hash |
+| --- | --- | --- | --- | --- | --- | --- |
+| "node" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "chrome" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "firefox" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webkit" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "electron-main" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webworker-chrome" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webworker-firefox" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
+| "webworker-webkit" | "ftp://bafyfoo" | "bafyfoo" | "bafyfoo" | undefined | "" | "" |
 

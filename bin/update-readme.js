@@ -109,13 +109,13 @@ async function main () {
   ]
 
   // add tables grouped by urlTemplate
-  const columns = ['environment', 'protocol', 'origin', 'protocol', 'host', 'hostname', 'path', 'search', 'hash']
-  const columnHeaders = `| ${columns.join(' | ')} |`
-  const columnHeaderBreak = `| ${columns.map(() => '---').join(' | ')} |`
+  const columns = ['environment', 'protocol', 'origin', 'host', 'hostname', 'path', 'search', 'hash']
   // eslint-disable-next-line guard-for-in
   for (const [groupName, groupItems] of Object.entries(groups)) {
     if (groupName.includes('PROTOCOL')) {
-    // const urlTemplateGroup = groups[urlTemplate]
+      const groupColumns = columns.filter(c => c !== 'protocol')
+      const columnHeaders = `| ${groupColumns.join(' | ')} |`
+      const columnHeaderBreak = `| ${groupColumns.map(() => '---').join(' | ')} |`
       markdownTableLines.push(`### Grouped by URL "${groupName}"`)
       markdownTableLines.push('');
 
@@ -125,17 +125,20 @@ async function main () {
         markdownTableLines.push(columnHeaders)
         markdownTableLines.push(columnHeaderBreak)
         const protocolGroup = groupItems.filter(result => result.protocol === protocol).sort(sortRowsByProperty('environment', ['node', 'chrome', 'firefox', 'webkit', 'electron-main', 'webworker']))
-        markdownTableLines.push(protocolGroup.map(result => `| ${columns.map(column => valueNormalize(result[column])).join(' | ')} |`).join('\n'))
+        markdownTableLines.push(protocolGroup.map(result => `| ${groupColumns.map(column => valueNormalize(result[column])).join(' | ')} |`).join('\n'))
         markdownTableLines.push('')
       })
     } else {
+      const groupColumns = columns.filter(c => c !== 'environment')
+      const columnHeaders = `| ${groupColumns.join(' | ')} |`
+      const columnHeaderBreak = `| ${groupColumns.map(() => '---').join(' | ')} |`
       markdownTableLines.push(`### Grouped by environment "${groupName}"`)
       markdownTableLines.push('')
 
       markdownTableLines.push(columnHeaders)
       markdownTableLines.push(columnHeaderBreak)
       const protocolGroup = groupItems.sort(sortRowsByProperty('protocol', ['ipfs:', 'ipns:', 'http:', 'https:', 'ftp:']))
-      markdownTableLines.push(protocolGroup.map(result => `| ${columns.map(column => valueNormalize(result[column])).join(' | ')} |`).join('\n'))
+      markdownTableLines.push(protocolGroup.map(result => `| ${groupColumns.map(column => valueNormalize(result[column])).join(' | ')} |`).join('\n'))
       markdownTableLines.push('')
     }
   }
