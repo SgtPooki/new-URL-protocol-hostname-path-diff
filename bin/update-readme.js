@@ -109,7 +109,7 @@ async function main () {
   ]
 
   // add tables grouped by urlTemplate
-  const columns = ['environment', 'protocol', 'origin', 'host', 'hostname', 'path', 'search', 'hash']
+  const columns = ['environment', 'protocol', 'origin', 'host', 'hostname', 'path', 'search', 'hash', 'toString']
   // eslint-disable-next-line guard-for-in
   for (const [groupName, groupItems] of Object.entries(groups)) {
     if (groupName.includes('PROTOCOL')) {

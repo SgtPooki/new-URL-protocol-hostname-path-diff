@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "build": "aegir build",
-    "clean": "aegir clean",
+    "clean": "aegir clean && rm -f url-results-*.*",
     "lint": "aegir lint",
     "test": "run-s test:*",
     "update-results": "run-s test && node ./bin/update-readme.js",

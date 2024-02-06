@@ -2,11 +2,12 @@ export function valueNormalize (value: any): string | null {
   if (value === undefined) {
     return 'undefined'
   } else if (typeof value === 'object' && value === null) {
-    return null
-  } else if (typeof value === 'string') {
-    return `"${value}"`
+    return 'null'
   }
-  return `${value}`
+  if (value !== "") {
+    return `\u0060${value}\u0060`
+  }
+  return `"${value}"`
 }
 
 export interface TableRow {
@@ -23,6 +24,7 @@ export interface TableRow {
    * mostly for matching against other rows for matching URLS
    */
   urlTemplate: string
+  toString: string
 }
 
 export type TableResults = TableRow[]
@@ -42,6 +44,7 @@ export function createTableResults (urlTemplate: string, environment: string): T
     const newUrlString = urlTemplate.replace(/^PROTOCOL:\/\//, `${protocol}://`)
     const urlObj = new URL(urlTemplate.replace(/^PROTOCOL:\/\//, `${protocol}://`))
     const row: TableRow = {
+      toString: urlObj.toString(),
       environment,
       urlTemplate,
       url: newUrlString,
@@ -65,8 +68,8 @@ export function createMarkdownTableResults (urlTemplate: string, environment: st
   const markdownTableLines = existingTable?.split('\n') ?? [
     '',
     `### Environment: ${environment}`,
-    '| URL              | origin | protocol | host | hostname | path     | search | hash |',
-    '|------------------|--------|----------|------|----------|----------|--------|------|'
+    '| URL              | origin | protocol | host | hostname | path     | search | hash | toString |',
+    '|------------------|--------|----------|------|----------|----------|--------|------|----------|'
   ]
 
   for (const protocol of ALL_PROTOCOLS) {
@@ -80,7 +83,8 @@ export function createMarkdownTableResults (urlTemplate: string, environment: st
       urlObj.hostname,
       urlObj.pathname,
       urlObj.search,
-      urlObj.hash
+      urlObj.hash,
+      urlObj.toString
     ]
 
     markdownTableLines.push(`| ${row.map(valueNormalize).join(' | ')} |`)

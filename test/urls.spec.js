@@ -26,18 +26,18 @@ describe('URL-test', () => {
   const RUNNER_ENV = process.env.RUNNER_ENV
   if (!RUNNER_ENV) throw new Error('No RUNNER_ENV set')
   describe('ipfs:// URLs', () => {
-    let urlString = getUrlString('ipfs', 'bafyFoo')
-    it(`parses ipfs://bafyFoo in ${RUNNER_ENV}`, () => {
-      const urlString = getUrlString('ipfs', 'bafyFoo')
+    let urlString = getUrlString('ipfs', 'AbC')
+    it(`parses ipfs://AbC in ${RUNNER_ENV}`, () => {
+      const urlString = getUrlString('ipfs', 'AbC')
       const url = new URL(urlString)
 
       if (['node', 'electron-main', 'webkit', 'webworker-webkit'].includes(RUNNER_ENV)) {
         validateObjects(url, {
           origin: null,
           protocol: 'ipfs:',
-          host: 'bafyFoo',
+          host: 'AbC',
           port: '',
-          hostname: 'bafyFoo',
+          hostname: 'AbC',
           hash: '',
           search: '',
           query: undefined,
@@ -54,38 +54,38 @@ describe('URL-test', () => {
           hash: '',
           search: '',
           query: undefined,
-          pathname: '//bafyFoo',
+          pathname: '//AbC',
           href: urlString
         })
       } else if (RUNNER_ENV.includes('firefox')) {
         validateObjects(url, {
-          origin: 'ipfs://bafyfoo',
+          origin: 'ipfs://abc',
           protocol: 'ipfs:',
-          host: 'bafyfoo',
+          host: 'abc',
           port: '',
-          hostname: 'bafyfoo',
+          hostname: 'abc',
           hash: '',
           search: '',
           query: undefined,
           pathname: '/',
-          href: urlString.replace('bafyFoo', 'bafyfoo') + '/'
+          href: urlString.replace('AbC', 'abc') + '/'
         })
       }
     })
 
-    it(`parses ipfs://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${RUNNER_ENV}`, () => {
-      urlString = getUrlString('ipfs', 'bafyFoo', '/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456')
+    it(`parses ipfs://AbC/path/file?a=1&b=2#h in ${RUNNER_ENV}`, () => {
+      urlString = getUrlString('ipfs', 'AbC', '/path/file?a=1&b=2#h')
       const url = new URL(urlString)
 
       if (['node', 'electron-main', 'webkit', 'webworker-webkit'].includes(RUNNER_ENV)) {
         validateObjects(url, {
           origin: null,
           protocol: 'ipfs:',
-          host: 'bafyFoo',
+          host: 'AbC',
           port: '',
-          hostname: 'bafyFoo',
-          hash: '#myHashValue1=123&myHashValue2=456',
-          search: '?myQueryK1=123&myQueryK2=456',
+          hostname: 'AbC',
+          hash: '#h',
+          search: '?a=1&b=2',
           query: undefined,
           pathname: '/path/file',
           href: urlString
@@ -97,31 +97,31 @@ describe('URL-test', () => {
           host: '',
           port: '',
           hostname: '',
-          hash: '#myHashValue1=123&myHashValue2=456',
-          search: '?myQueryK1=123&myQueryK2=456',
+          hash: '#h',
+          search: '?a=1&b=2',
           query: undefined,
-          pathname: '//bafyFoo/path/file',
+          pathname: '//AbC/path/file',
           href: urlString
         })
       } else if (RUNNER_ENV.includes('firefox')) {
         validateObjects(url, {
-          origin: 'ipfs://bafyfoo',
+          origin: 'ipfs://abc',
           protocol: 'ipfs:',
-          host: 'bafyfoo',
+          host: 'abc',
           port: '',
-          hostname: 'bafyfoo',
-          hash: '#myHashValue1=123&myHashValue2=456',
-          search: '?myQueryK1=123&myQueryK2=456',
+          hostname: 'abc',
+          hash: '#h',
+          search: '?a=1&b=2',
           query: undefined,
           pathname: '/path/file',
-          href: urlString.replace('bafyFoo', 'bafyfoo')
+          href: urlString.replace('AbC', 'abc')
         })
       }
     })
   })
   describe('ipns:// URLs', () => {
     const protocol = 'ipns'
-    let urlString = getUrlString(protocol, 'bafyFoo')
+    let urlString = getUrlString(protocol, 'AbC')
     it(`parses ${urlString} in ${RUNNER_ENV}`, () => {
       const url = new URL(urlString)
 
@@ -129,9 +129,9 @@ describe('URL-test', () => {
         validateObjects(url, {
           origin: null,
           protocol: 'ipns:',
-          host: 'bafyFoo',
+          host: 'AbC',
           port: '',
-          hostname: 'bafyFoo',
+          hostname: 'AbC',
           hash: '',
           search: '',
           query: undefined,
@@ -148,38 +148,38 @@ describe('URL-test', () => {
           hash: '',
           search: '',
           query: undefined,
-          pathname: '//bafyFoo',
+          pathname: '//AbC',
           href: urlString
         })
       } else if (RUNNER_ENV.includes('firefox')) {
         validateObjects(url, {
-          origin: 'ipns://bafyfoo',
+          origin: 'ipns://abc',
           protocol: 'ipns:',
-          host: 'bafyfoo',
+          host: 'abc',
           port: '',
-          hostname: 'bafyfoo',
+          hostname: 'abc',
           hash: '',
           search: '',
           query: undefined,
           pathname: '/',
-          href: urlString.replace('bafyFoo', 'bafyfoo') + '/'
+          href: urlString.replace('AbC', 'abc') + '/'
         })
       }
     })
 
-    it(`parses ipns://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${RUNNER_ENV}`, () => {
-      urlString = getUrlString('ipns', 'bafyFoo', '/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456')
+    it(`parses ipns://AbC/path/file?a=1&b=2#h in ${RUNNER_ENV}`, () => {
+      urlString = getUrlString('ipns', 'AbC', '/path/file?a=1&b=2#h')
       const url = new URL(urlString)
 
       if (['node', 'electron-main', 'webkit', 'webworker-webkit'].includes(RUNNER_ENV)) {
         validateObjects(url, {
           origin: null,
           protocol: 'ipns:',
-          host: 'bafyFoo',
+          host: 'AbC',
           port: '',
-          hostname: 'bafyFoo',
-          hash: '#myHashValue1=123&myHashValue2=456',
-          search: '?myQueryK1=123&myQueryK2=456',
+          hostname: 'AbC',
+          hash: '#h',
+          search: '?a=1&b=2',
           query: undefined,
           pathname: '/path/file',
           href: urlString
@@ -191,24 +191,24 @@ describe('URL-test', () => {
           host: '',
           port: '',
           hostname: '',
-          hash: '#myHashValue1=123&myHashValue2=456',
-          search: '?myQueryK1=123&myQueryK2=456',
+          hash: '#h',
+          search: '?a=1&b=2',
           query: undefined,
-          pathname: '//bafyFoo/path/file',
+          pathname: '//AbC/path/file',
           href: urlString
         })
       } else if (RUNNER_ENV.includes('firefox')) {
         validateObjects(url, {
-          origin: 'ipns://bafyfoo',
+          origin: 'ipns://abc',
           protocol: 'ipns:',
-          host: 'bafyfoo',
+          host: 'abc',
           port: '',
-          hostname: 'bafyfoo',
-          hash: '#myHashValue1=123&myHashValue2=456',
-          search: '?myQueryK1=123&myQueryK2=456',
+          hostname: 'abc',
+          hash: '#h',
+          search: '?a=1&b=2',
           query: undefined,
           pathname: '/path/file',
-          href: urlString.replace('bafyFoo', 'bafyfoo')
+          href: urlString.replace('AbC', 'abc')
         })
       }
     })
@@ -216,119 +216,118 @@ describe('URL-test', () => {
 
   describe('http:// URLs', () => {
     const protocol = 'http'
-    let urlString = getUrlString(protocol, 'bafyFoo')
+    let urlString = getUrlString(protocol, 'AbC')
     it(`parses ${urlString} URLs work in ${RUNNER_ENV}`, () => {
       const url = new URL(urlString)
       validateObjects(url, {
-        origin: 'http://bafyfoo',
+        origin: 'http://abc',
         protocol: 'http:',
-        host: 'bafyfoo',
+        host: 'abc',
         port: '',
-        hostname: 'bafyfoo',
+        hostname: 'abc',
         hash: '',
         search: '',
         query: undefined,
         pathname: '/',
-        href: urlString.replace('bafyFoo', 'bafyfoo') + '/'
+        href: urlString.replace('AbC', 'abc') + '/'
       })
     })
 
-    it(`parses http://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${RUNNER_ENV}`, () => {
-      urlString = getUrlString('http', 'bafyFoo', '/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456')
+    it(`parses http://AbC/path/file?a=1&b=2#h in ${RUNNER_ENV}`, () => {
+      urlString = getUrlString('http', 'AbC', '/path/file?a=1&b=2#h')
       const url = new URL(urlString)
       validateObjects(url, {
-        origin: 'http://bafyfoo',
+        origin: 'http://abc',
         protocol: 'http:',
-        host: 'bafyfoo',
+        host: 'abc',
         port: '',
-        hostname: 'bafyfoo',
-        hash: '#myHashValue1=123&myHashValue2=456',
-        search: '?myQueryK1=123&myQueryK2=456',
+        hostname: 'abc',
+        hash: '#h',
+        search: '?a=1&b=2',
         query: undefined,
         pathname: '/path/file',
-        href: urlString.replace('bafyFoo', 'bafyfoo')
+        href: urlString.replace('AbC', 'abc')
       })
     })
   })
 
   describe('https:// URLs', () => {
     const protocol = 'https'
-    let urlString = getUrlString(protocol, 'bafyFoo')
+    let urlString = getUrlString(protocol, 'AbC')
     it(`parses ${urlString} in ${RUNNER_ENV}`, () => {
       const url = new URL(urlString)
       validateObjects(url, {
-        origin: 'https://bafyfoo',
+        origin: 'https://abc',
         protocol: 'https:',
-        host: 'bafyfoo',
+        host: 'abc',
         port: '',
-        hostname: 'bafyfoo',
+        hostname: 'abc',
         hash: '',
         search: '',
         query: undefined,
         pathname: '/',
-        href: urlString.replace('bafyFoo', 'bafyfoo') + '/'
+        href: urlString.replace('AbC', 'abc') + '/'
       })
     })
 
-    it(`parses https://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${RUNNER_ENV}`, () => {
-      urlString = getUrlString('https', 'bafyFoo', '/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456')
+    it(`parses https://AbC/path/file?a=1&b=2#h in ${RUNNER_ENV}`, () => {
+      urlString = getUrlString('https', 'AbC', '/path/file?a=1&b=2#h')
       const url = new URL(urlString)
       validateObjects(url, {
-        origin: 'https://bafyfoo',
+        origin: 'https://abc',
         protocol: 'https:',
-        host: 'bafyfoo',
+        host: 'abc',
         port: '',
-        hostname: 'bafyfoo',
-        hash: '#myHashValue1=123&myHashValue2=456',
-        search: '?myQueryK1=123&myQueryK2=456',
+        hostname: 'abc',
+        hash: '#h',
+        search: '?a=1&b=2',
         query: undefined,
         pathname: '/path/file',
-        href: urlString.replace('bafyFoo', 'bafyfoo')
+        href: urlString.replace('AbC', 'abc')
       })
     })
   })
 
   describe('ftp:// URLs', () => {
     const protocol = 'ftp'
-    let urlString = getUrlString(protocol, 'bafyFoo')
+    let urlString = getUrlString(protocol, 'AbC')
     it(`parses ${urlString} in ${RUNNER_ENV}`, () => {
       const url = new URL(urlString)
       validateObjects(url, {
-        origin: 'ftp://bafyfoo',
+        origin: 'ftp://abc',
         protocol: 'ftp:',
-        host: 'bafyfoo',
+        host: 'abc',
         port: '',
-        hostname: 'bafyfoo',
+        hostname: 'abc',
         hash: '',
         search: '',
         query: undefined,
         pathname: '/',
-        href: urlString.replace('bafyFoo', 'bafyfoo') + '/'
+        href: urlString.replace('AbC', 'abc') + '/'
       })
     })
 
-    it(`parses ftp://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456 in ${RUNNER_ENV}`, () => {
-      urlString = getUrlString('ftp', 'bafyFoo', '/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456')
+    it(`parses ftp://AbC/path/file?a=1&b=2#h in ${RUNNER_ENV}`, () => {
+      urlString = getUrlString('ftp', 'AbC', '/path/file?a=1&b=2#h')
       const url = new URL(urlString)
       validateObjects(url, {
-        origin: 'ftp://bafyfoo',
+        origin: 'ftp://abc',
         protocol: 'ftp:',
-        host: 'bafyfoo',
+        host: 'abc',
         port: '',
-        hostname: 'bafyfoo',
-        hash: '#myHashValue1=123&myHashValue2=456',
-        search: '?myQueryK1=123&myQueryK2=456',
+        hostname: 'abc',
+        hash: '#h',
+        search: '?a=1&b=2',
         query: undefined,
         pathname: '/path/file',
-        href: urlString.replace('bafyFoo', 'bafyfoo')
+        href: urlString.replace('AbC', 'abc')
       })
     })
   })
   it('writes results to markdown files', async () => {
     expect(true).to.be.true()
     const URLS = [
-      'PROTOCOL://bafyFoo',
-      'PROTOCOL://bafyFoo/path/file?myQueryK1=123&myQueryK2=456#myHashValue1=123&myHashValue2=456'
+      'PROTOCOL://AbC/path/file?a=1&b=2#h'
     ]
     for (const url of URLS) {
       const table = createTableResults(url, RUNNER_ENV)
